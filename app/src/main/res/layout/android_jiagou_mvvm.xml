@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/res-auto">
+
+   <data>
+       <variable
+           name="bean"
+           type="com.example.android.jishujiagou.mvvm.ImageBean" />
+      <variable
+          name="presenter"
+          type="com.example.android.jishujiagou.mvvm.MainActivity.Presenter" />
+   </data>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       tools:context=".activity.MainActivity">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+         <TextView
+             android:id="@+id/tv_1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+
+             />
+
+         <Button
+             android:id="@+id/btn_load"
+             android:layout_width="0dp"
+             android:onClick="@{presenter.onClick}"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="加载" />
+      </LinearLayout>
+
+
+   </ScrollView>
+</layout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2018 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <rotate
+        android:duration="3000"
+        android:fromDegrees="0"
+        android:toDegrees="360"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+      />
+   <!-- 属性：interpolator  指定一个动画的插入器
+                           有三种：accelerate_decelerate_interpolator 加速-减速 动画插入器
+                                 accelerate_interpolator 加速 动画插入器
+                                 decelerate_interpolator 减速 动画插入器
+              fromDegrees 动画起始时物件的角度
+              toDegrees   动画结束时物件旋转的角度
+                          说明：当角度为负，表示逆时针旋转
+                                当角度为正，表示顺时针旋转
+                                (负数from-to正数:顺时针旋转)
+                                (负数from-to负数:逆时针旋转)
+                                (正数from-to正数:顺时针旋转)
+                                (正数from-to负数:逆时针旋转)
+             pivotX       属性为动画相对于物件的X坐标的开始位置
+             pivotY       属性为动画相对于物件的Y坐标的开始位置
+                          说明： 以上两个属性值 从0%-100%中取值    50%为物件的X或Y方向坐标上的中点位置
+             duration     动画持续时间
+               -->
+</set>

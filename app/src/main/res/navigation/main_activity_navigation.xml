@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/home_dest">
+    <fragment android:id="@+id/home_dest"
+        android:name="com.example.nagivation.MainNavFragment"
+        tools:layout="@layout/android_navi_main"
+        >
+        <action android:id="@+id/action_start_nav_fragment2"
+            app:destination="@id/frag2"
+            />
+    </fragment>
+
+    <fragment android:id="@+id/frag2"
+        android:name="com.example.nagivation.Nav2Fragment"
+        tools:layout="@layout/android_navi_frag2"
+        >
+        <action android:id="@+id/navi_frag3"
+            app:destination="@id/frag3"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+     <!--   action的id 和 destination:
+        id:就是这个 action 的 id,
+        destination: 是目的地，要跳转到哪里的
+        还可以设置动画-->
+    </fragment>
+    <fragment android:id="@+id/frag3"
+        android:name="com.example.nagivation.Nav3Fragment"
+        tools:layout="@layout/android_navi_frag3"
+        >
+        <action android:id="@+id/navi_frag1"
+            app:destination="@id/home_dest"
+            />
+    </fragment>
+
+</navigation>

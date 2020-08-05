@@ -1,0 +1,25 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies{
+    // gradle sdk
+    implementation gradleApi()
+    // groovy sdk
+    implementation localGroovy()
+    implementation 'com.android.tools.build:gradle:1.5.0'
+}
+
+repositories{
+    mavenCentral()
+}
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.groupId = 'com.demo.myplugin'
+            pom.artifactId = 'GradlePlugin'
+            pom.version = 1.0
+            // maven本地仓库的目录
+            repository(url: uri('../repos'))
+        }
+    }
+}

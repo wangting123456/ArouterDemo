@@ -1,0 +1,2 @@
+include ':app', ':mymaven', ':myplugin'
+rootProject.name='ArouterDemo'

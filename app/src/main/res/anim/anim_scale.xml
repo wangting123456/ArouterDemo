@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2018 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <scale
+        android:duration="3000"
+        android:fromXScale="0.0"
+        android:fromYScale="0.0"
+        android:toXScale="1.4"
+        android:toYScale="1.4"
+        android:pivotY="50%"
+        android:pivotX="50%"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+      />
+   <!-- 尺寸伸缩动画效果 scale
+    属性：fromXScale   动画起始时X坐标上的伸缩尺寸
+          fromYScale   动画起始时Y坐标上的伸缩尺寸
+          toXScale     动画结束时X坐标上的伸缩尺寸
+          toYScale     动画结束时Y坐标上的伸缩尺寸
+                       说明:0.0表示收缩到没有
+                            1.0表示正常无收缩
+                            值小于1.0表示有收缩
+                            值大于1.0表示有放大
+          pivotX      属性为动画相对于物件的X坐标的开始位置
+          pivotY      属性为动画相对于物件的Y坐标的开始位置
+                      说明:以上两个属性值 从0%-100%中取值
+                           50%为物件的X或Y方向坐标上的中点位置
+         fillAfter    属性 当设置为true ，该动画转化在动画结束后被应用
+
+               -->
+</set>

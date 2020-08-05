@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.example.android.databind.databind_advance.UserBean"/>
+        <import type="com.example.android.databind.databind_basic.UserBean" alias="UserBean2"/>
+     <variable
+         name="userbean"
+         type="UserBean" />
+        <variable
+            name="userbean2"
+            type="UserBean2" />
+        <variable
+            name="clickHandler"
+            type="com.example.android.databind.databind_advance.OnClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.MainActivity">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`姓名:`+userbean.name}"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"userbean2:"+userbean2.name}'
+
+            />
+
+        <include
+            layout="@layout/activity_databind"
+
+            />
+        <!--app:userbean = "@{userbean}"-->
+    </LinearLayout>
+</layout>
